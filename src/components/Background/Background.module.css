@@ -1,0 +1,29 @@
+.article {
+    height:900px;
+    width: 100%;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    opacity: 0.5;
+}
+
+.header {
+    font-size: 80px;
+    color: rgb(29, 210, 223);
+    text-align: center;
+    opacity: 1;
+    margin-top:62px;
+}
+.button{
+    margin-top: -675px;
+    width:125px;
+    background-color:rgb(62, 216, 236);
+    border-radius: 12px;
+    color:aliceblue;
+    opacity: 0.6;
+}
+.button:hover{
+    opacity: 1;
+}
