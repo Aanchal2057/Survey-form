@@ -149,7 +149,7 @@ const FormElement = ({element, index, createQuestion, createForm}) => {
               </div>
             ))}
             <div className="d-inline-flex">
-              <button type="button" className="btn btn-secondary" onClick={() => setDropDownList(prev => [...prev, {id: uuidv4(), name: `item${dropDownList.length + 1}`}])}>
+              <button type="button" className="btn btn-primary" onClick={() => setDropDownList(prev => [...prev, {id: uuidv4(), name: `item${dropDownList.length + 1}`}])}>
                 <i className="bi bi-plus-circle"></i> Add Item
               </button>
             </div>
@@ -160,7 +160,7 @@ const FormElement = ({element, index, createQuestion, createForm}) => {
           <>
             <div className="d-flex flex-wrap">
               {ratings.map(rating => (
-                  <span key={rating} className="bg-secondary rounded-5 p-3 text-white me-2">{rating}</span>
+                  <span key={rating} className="bg-info rounded-5 p-3 text-white me-2">{rating}</span>
               ))}
             </div>
             <div className="mt-3">
@@ -179,7 +179,7 @@ const FormElement = ({element, index, createQuestion, createForm}) => {
                 </div>
               ))}
               <div className="d-inline-flex">
-                <button type="button" className="btn btn-secondary" onClick={() => setCheckBoxList(prev => [...prev, {id: uuidv4(), name: `item${checkBoxList.length + 1}`}])}>
+                <button type="button" className="btn btn-primary" onClick={() => setCheckBoxList(prev => [...prev, {id: uuidv4(), name: `item${checkBoxList.length + 1}`}])}>
                   <i className="bi bi-plus-circle"></i> Add Item
                 </button>
               </div>
@@ -187,7 +187,7 @@ const FormElement = ({element, index, createQuestion, createForm}) => {
           )
       case "boolean":
         return (
-          <span className="rounded-5 bg-secondary p-3 d-flex justify-content-between" style={{width: "fitContent"}}>
+          <span className="rounded-5 bg-info p-3 d-flex justify-content-between" style={{width: "fitContent"}}>
             <input className="question-input text-white boolean-input" type="text" value={labelTrue} onChange={(e) => setLabelTrue(e.target.value)} />
             <input className="question-input text-end text-white boolean-input" type="text" value={labelFalse} onChange={(e) => setLabelFalse(e.target.value)} />
           </span>
