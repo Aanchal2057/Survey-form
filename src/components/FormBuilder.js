@@ -58,7 +58,7 @@ const FormBuilder = () => {
       const click = async (e) => {
         e.preventDefault();
 
-        await fetch('https://json-4s60be2d6-aanchal2057.vercel.app/formquestion', {
+        await fetch('https://json-zeta.vercel.app/formquestion', {
             method: 'POST',
             body: JSON.stringify(surveyJson),
             headers: { 'Content-Type': 'application/json' }

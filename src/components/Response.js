@@ -26,7 +26,7 @@ function App({ forms }) {
     
     const createSuvery = async () => {
 
-      await fetch('https://json-4s60be2d6-aanchal2057.vercel.app/forms', {
+      await fetch('https://json-zeta.vercel.app/forms', {
         method: 'POST',
         body: JSON.stringify(results),
         headers: { 'Content-Type': 'application/json' }

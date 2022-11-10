@@ -10,7 +10,7 @@ const Sharedpage = () => {
     const [forms, setForms] = useState(null)
 
   useEffect(() => {
-    fetch('https://json-4s60be2d6-aanchal2057.vercel.app/formquestion')
+    fetch('https://json-zeta.vercel.app/formquestion')
       .then(res => {
         return res.json();
       })
