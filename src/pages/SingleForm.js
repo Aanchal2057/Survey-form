@@ -22,6 +22,7 @@ const id = iddata.id;
       })
       .then(data => {
         setForms(data);
+  
       })
   }, [])
 
