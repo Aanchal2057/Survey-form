@@ -10,7 +10,7 @@ import Card from "./Card"
 import FormElement from "./FormElement";
 
 import PreviewForm from "./PreviewForm";
-import createSuvery from "./PreviewForm";
+
 import '../pages/home.css';
 
 
@@ -18,13 +18,14 @@ const FormBuilder = () => {
     const formElements = useSelector(state => state.formElements)
     const dispatch = useDispatch()
 
-    const [title, setTitle] = useState('Form Title')
-    const [description, setDescription] = useState('Form Description')
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
     const [showQuestionType, setShowQuestionType] = useState(false)
     const [createForm, setCreateForm] = useState(false)
     const [activeStep, setActiveStep] = useState(1)
     const [error, setError] = useState(false)
     const [surveyJson, setSurveyJson] = useState({})
+   
     useEffect(() => {
         setSurveyJson({
             title,
@@ -44,7 +45,11 @@ const FormBuilder = () => {
         setCreateForm(true);
         if (activeStep === 2 && formElements.length < 1) {
             setError(true)
-        } else {
+        } 
+         else if (activeStep === 1 && (title.length < 1||description.length<1)) {
+          setError(true)
+      } 
+        else {
             setError(false)
             setActiveStep(activeStep + 1)
         }
@@ -67,7 +72,8 @@ const FormBuilder = () => {
         <div className="formslider container mt-5 p-5">
           <MultiStepForm activeStep={activeStep} accentColor="#ADD8E6">
             <Step label="Title and description">
-              <Card className="mt-5 mb-3">
+             
+                  <Card className="mt-5 mb-3">
                 
                 <div className="mb-4">
                   <label htmlFor="fromTitle" className="form-label">
@@ -94,7 +100,16 @@ const FormBuilder = () => {
                     onChange={(e) => setDescription(e.target.value)}
                   />
                 </div>
+                
               </Card>
+              {error && (
+                <h5 className="text-danger text-center">
+                  *** Title and description is required
+                </h5>
+              )}
+             
+           
+            
             </Step>
   
             <Step label="Add Question">
