@@ -16,7 +16,7 @@ const id = iddata.id;
 
   useEffect(() => {
  
-    fetch('http://localhost:8000/formquestion/'+id)
+    fetch('https://json-zeta.vercel.app/formquestion/'+id)
       .then(res => {
         return res.json();
       })
