@@ -26,7 +26,7 @@ function App({ forms }) {
     
     const createSuvery = async () => {
 
-      await fetch('http://localhost:8000/forms', {
+      await fetch('https://json-4s60be2d6-aanchal2057.vercel.app/forms', {
         method: 'POST',
         body: JSON.stringify(results),
         headers: { 'Content-Type': 'application/json' }
